@@ -1,0 +1,26 @@
+.wrapper {
+    background-image: url('../../../assets/images/shattered-island.gif') !important;
+}
+
+.login {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login__form {
+    flex: 0 0 35%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1.5em 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login__title {
+    color: white;
+    margin-bottom: 1em;
+}
