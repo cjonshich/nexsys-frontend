@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +10,20 @@ export class HomeComponent implements OnInit {
 
   public isToggled = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    if (!localStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn') !== 'true') {
+      this.router.navigate(['/login']);
+    }
   }
 
   public toggleSidebar(event) {
     this.isToggled = !this.isToggled;
+  }
+
+  public showUnit() {
+    this.router.navigate(['/unidad/1']);
   }
 
 }

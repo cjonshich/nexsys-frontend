@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
     if (!this.isEmailValid || !this.isPasswordValid) {
       return;
     }
-    this.router.navigate(['/home']);
+    localStorage.setItem('isLoggedIn', 'true');
+    this.router.navigate(['/inicio']);
     // Redirect to dashboard
   }
 
