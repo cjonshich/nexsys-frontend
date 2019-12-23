@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Routes
-
+app.use(require('./routes/report.routes'));
 // Init
 app.listen(3000, () => {
     console.log('Server on port ', app.get('port'));
